@@ -4,30 +4,30 @@ import TodoForm from '../components/TodoForm';
 const Home = () => {
   const [todos, setTodos] = useState([]);
 
-  // Відновлення задач з localStorage при завантаженні компонента
   useEffect(() => {
-    const storedTodos = JSON.parse(localStorage.getItem('todos')) || [];
+    const storedTodos = JSON.parse(localStorage.getItem('tod')) || [];
     setTodos(storedTodos);
   }, []);
 
-  // Збереження задач в localStorage при зміні списку задач
   useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos));
+    localStorage.setItem('tod', JSON.stringify(todos));
   }, [todos]);
 
   const addTodo = (text) => {
     const newTodo = { id: Date.now(), text, completed: false };
-    setTodos([...todos, newTodo]);
+    setTodos((prevTodos) => [...prevTodos, newTodo]);
   };
 
   const toggleTodo = (id) => {
-    setTodos(todos.map(todo => 
-      todo.id === id ? { ...todo, completed: !todo.completed } : todo
-    ));
+    setTodos((prevTodos) => 
+      prevTodos.map(todo => 
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
   };
 
   const removeTodo = (id) => {
-    setTodos(todos.filter(todo => todo.id !== id));
+    setTodos((prevTodos) => prevTodos.filter(todo => todo.id !== id));
   };
 
   return (
