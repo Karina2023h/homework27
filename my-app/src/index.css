@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.2;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: #6f6f6f;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  gap: 150px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 410px;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 19px;
+}
+
+header nav ul li {
+  display: flex;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+header button {
+  background: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: auto;
+  color: black;
+  width: 115px;
+  height: 35px;
+  border-radius: 3px;
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 75%;
+  flex-grow: 1;
+  height: 586px;
+  padding-top: 25px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 50px;
+}
+
+.form {
+  background: #fff;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__input {
+  min-height: 25px;
+  padding: 15px;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.form__btn {
+  background: #f00606;
+  border: none;
+  cursor: pointer;
+  width: 125px;
+  height: 52px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.todo-item {
+  display: flex;
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: rgb(172, 171, 169);
+}
+
+.todo-item--checked {
+  text-decoration: line-through;
+}
+
+.todo-item__description {
+  flex-grow: 1;
+  padding-left: 10px;
+}
+
+.todo-item__delete {
+  background: #14b706;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 16px;
+}
